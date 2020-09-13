@@ -60,7 +60,6 @@
   font-display: swap;
 }
 
-
 /* lato-300 - latin */
 @font-face {
   font-family: "Lato";
@@ -81,6 +80,7 @@
       format("svg"); /* Legacy iOS */
   font-display: swap;
 }
+
 /* lato-700 - latin */
 @font-face {
   font-family: "Lato";
@@ -98,5 +98,49 @@
     /* Safari, Android, iOS */
       url("../assets/fonts/lato-v16-latin/lato-v16-latin-700.svg#Lato")
       format("svg"); /* Legacy iOS */
+  font-display: swap;
+}
+
+/* barlow-regular - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/barlow/barlow-regular.woff') format('woff'),
+    url('../assets/fonts/barlow/barlow-regular.ttf') format('truetype'),
+    url('../assets/fonts/barlow/barlow-regular.svg') format('svg');
+  font-display: swap;
+}
+
+/* barlow-light - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-weight: normal;
+  font-style: 300;
+  src: url('../assets/fonts/barlow/barlow-light.woff') format('woff'),
+    url('../assets/fonts/barlow/barlow-light.ttf') format('truetype'),
+    url('../assets/fonts/barlow/barlow-light.svg') format('svg');
+  font-display: swap;
+}
+
+/* barlow-bold - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-weight: normal;
+  font-style: 700;
+  src: url('../assets/fonts/barlow/barlow-bold.woff') format('woff'),
+    url('../assets/fonts/barlow/barlow-bold.ttf') format('truetype'),
+    url('../assets/fonts/barlow/barlow-bold.svg') format('svg');
+  font-display: swap;
+}
+
+/* barlow condensed-extralight - latin */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-weight: normal;
+  font-style: 200;
+  src: url('../assets/fonts/barlow/barlowcondensed-extralight.woff') format('woff'),
+    url('../assets/fonts/barlow/barlowcondensed-extralight.ttf') format('truetype'),
+    url('../assets/fonts/barlow/barlowcondensed-extralight.svg') format('svg');
   font-display: swap;
 }
