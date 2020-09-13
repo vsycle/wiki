@@ -35,6 +35,7 @@ module.exports = {
       filename: "index.html",
       template: "./src/index.pug",
       excludeChunks: ["content", "team"],
+      favicon: './src/assets/favicons/favicon.ico'
     }),
     ...pages.map(
       (page) =>
@@ -42,12 +43,14 @@ module.exports = {
           template: "./src/pages/" + page,
           filename: page.slice(0, -4) + "/index.html",
           excludeChunks: ["index", "team"],
+          favicon: './src/assets/favicons/favicon.ico'
         })
     ),
     new HTMLWebpackPlugin({
       filename: "Team/index.html",
       template: "./src/pages/Team.pug",
       excludeChunks: ["index", "content"],
+      favicon: './src/assets/favicons/favicon.ico'
     }),
   ],
   module: {
@@ -58,4 +61,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      Assets: path.resolve(__dirname, "src/assets")
+    }
+  }
 };
