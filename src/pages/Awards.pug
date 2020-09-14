@@ -1,0 +1,37 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Awards"
+    - var tagline = "We won a lot of things"
+    - var requireMathJax = true
+
+block article
+
+    :markdown-it(html)
+
+
+        This is a regular paragraph. 
+        #### This is a level 4 heading. 
+        [This is a link](google.com)
+
+    - var imgpath = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
+    +image(1, imgpath, "Caption", 100)
+
+    :markdown-it(html)
+        Back to regular text.
+
+        # Tables
+
+        This is a regular paragraph, which precedes the table.
+        When you want to insert a table, indent one level back and specify the plugin.
+        Then indent inside again and start writing the table.
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+        | This is | the table | header row |
+        | ------  | --------- | ---------- |
+        | 1       | 2         | 3          |
+        | 4       | 5         | 6          |
+        [Table 1: Caption goes here.]
+
+    :markdown-it(html)
+        And when you're done, go back to the regular markdown filter.
