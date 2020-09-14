@@ -2,8 +2,8 @@
 * Navbar 
 **/
 
-$navBG: #2c3e50;
-$navItem: white;
+$navBG: #aab8c2;
+$navItem: #6d7475;
 $navItemHover: #18bc9c;
 
 $navBG-dark: #375A7F;
@@ -30,6 +30,10 @@ $dropdown-border-dark: rgb(68, 68, 68);
       font-weight: 600;
     }
 
+    img {
+      height: 50px;
+    }
+
     &:hover {
       color: white;
     }
@@ -49,7 +53,7 @@ $dropdown-border-dark: rgb(68, 68, 68);
   }
 
   a {
-    font-family: "Lato", sans-serif;
+    font-family: "Barlow", sans-serif;
     font-size: 1.1rem;
     color: $navItem;
 
