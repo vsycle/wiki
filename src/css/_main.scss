@@ -17,6 +17,15 @@ html {
 
 body {
   transition: background-color 0.3s ease-out;
+  background-image: url("../assets/img/background.png");
+  background-size: cover;
+}
+
+@include respond-below(md) {
+  body {
+    background-image: url("../assets/img/background-mobile.png");
+    background-size: cover;
+  }
 }
 
 // button from
