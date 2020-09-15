@@ -30,6 +30,7 @@
   "homepage": "https://github.com//#readme",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "bl": ">=1.2.3",
     "bootstrap": "^4.5.2",
     "bootstrap-reboot": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
