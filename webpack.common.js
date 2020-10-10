@@ -48,7 +48,7 @@ module.exports = {
     ),
     new HTMLWebpackPlugin({
       filename: "Team/index.html",
-      template: "./src/pages/Team.pug",
+      template: "./src/pages/Team_Members.pug",
       excludeChunks: ["index", "content"],
       favicon: './src/assets/favicons/favicon.ico'
     }),
