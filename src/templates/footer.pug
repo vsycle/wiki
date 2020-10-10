@@ -1,21 +1,13 @@
 footer
-  .container
-    p Sample template built using the iGEM Wiki Starter Pack by BITS Goa.
-    p Code released under the MIT license.
-    p
-      | Based on 
-      a(href="https://getbootstrap.com") Bootstrap
-      |  and themes 
-      a(href="https://bootswatch.com/flatly/") Flatly
-      |  and 
-      a(href="https://bootswatch.com/darkly/") Darkly
-      |  from 
-      a(href="https://bootswatch.com/") Bootswatch
-      | .
-    p Some content from the 
-      a(href="https://2020.igem.org/Team:Example") iGEM Example Wiki
-      | . Images from 
-      a(href="https://unsplash.com") Unsplash
-      | . Web fonts from 
-      a(href="https://fonts.google.com") Google
-      | .
+  .container.clearfix.d-flex.justify-content-between
+    .social.d-flex
+      .social-item
+        <a class="facebook" href="https://www.facebook.com/iGEMUGent2020"></a>
+      .social-item
+        <a class="twitter" href="https://twitter.com/igem_ghent"></a>
+      .social-item
+        <a class="instagram" href="https://www.instagram.com/igemugent2020"></a>
+    .sponsor-item.lg
+      img(src=require('Assets/img/sponsor_rnr.png')['default'])
+    .sponsor-item.sm
+      img(src=require('Assets/img/sponsor_watergroep.png')['default'])
