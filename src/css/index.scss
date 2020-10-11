@@ -99,10 +99,18 @@ article {
   .card {
     margin: 0 0 1.5rem 0;
   }
+
   .card-img-top {
     img {
-      width: 100%;
+      width: 18rem;
+      height: 18rem; 
+      object-fit: cover;  
     }
+  }
+
+  .card-title {
+    font-size: 2rem;
+    font-family: "Barlow";
   }
 
   p.card-text {

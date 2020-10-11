@@ -12,9 +12,8 @@ html(lang="en")
 
     article
       .container
-        h1 Very cool
-        p You may style this page as you like or you can simply leave the style as it is. You can easily keep the styling and edit the content of these default wiki pages with your project information and completely fulfill the requirement to document your project.
-        p While you may not win Best Wiki with this styling, your team is still eligible for all other awards. This default wiki meets the requirements, it improves navigability and ease of use for visitors, and you should not feel it is necessary to style beyond what has been provided.
+        h1 Making it rain
+        p Drought and water scarcity are becoming a worldwide problem. Manipulating the weather to make it rain by the use of cloud seeding, a technique where certain particles are dispersed in clouds, could be a remedy. Cloud seeding is already used, but is mainly done by using the toxic silver iodide. With team Vsycle we designed an alternative cloud seeding agent that is biological, nontoxic and biodegradable. For this, we used the ice nucleation proteins (INPs) from Pseudomonas syringae, which facilitate ice formation. As the formation of ice crystals in clouds plays an essential role in many environments, this protein is very interesting to use as a potential alternative to silver iodide in cloud seeding. To anticipate on legislation issues regarding GMO’s, we designed INP producing E. coli cells that can be induced to leak their cellular contents according to the bacterial ghost principle.
 
         br
 
@@ -22,35 +21,35 @@ html(lang="en")
           .col
             .card(style='width: 18rem;')
               .card-img-top
-                img(src=require('./assets/img/Home--design.jpeg')['default'])
+                img(src=require('./assets/img/obama1.jpg')['default'])
 
               .card-body
-                h5.card-title Design
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                a.btn.btn-primary(href='Design') Read more
+                h5.card-title Project
+                //- p.card-text
+                //-   | Get to know more about our project.
+                a.btn.btn-primary(href='Description') Read more
+
+          .col
+            .card(style = 'width: 18rem;')
+              .card-img-top
+                img(src=require('./assets/img/obama8.png')['default'])
+
+              .card-body
+                h5.card-title Human Practices & Outreach
+                //- p.card-text
+                //-   | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Human_Practices') Read More
 
           .col
             .card(style='width: 18rem;')
               .card-img-top
-                img(src=require('./assets/img/Home--model.jpeg')['default'])
+                img(src=require('./assets/img/obama3.png')['default'])
 
               .card-body
-                h5.card-title Model
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                a.btn.btn-primary(href='Model') Read More
-
-          .col
-            .card(style='width: 18rem;')
-              .card-img-top
-                img(src=require('./assets/img/Home--human-practices.jpg')['default'])
-
-              .card-body
-                h5.card-title Human Practices
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                a.btn.btn-primary(href='Human_Practices') Read more
+                h5.card-title Team
+                //- p.card-text
+                //-   | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                a.btn.btn-primary(href='Team_Members') Read more
 
 
     include templates/footer.pug
