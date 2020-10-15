@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 var HTMLWebpackPlugin = require("html-webpack-plugin");
+var CopyPlugin = require('copy-webpack-plugin');
 
 // List all files in a directory in Node.js recursively in a synchronous fashion
 // https://gist.github.com/kethinov/6658166#gistcomment-1976458
@@ -47,10 +48,34 @@ module.exports = {
         })
     ),
     new HTMLWebpackPlugin({
-      filename: "Team/index.html",
+      filename: "Team_Members/index.html",
       template: "./src/pages/Team_Members.pug",
       excludeChunks: ["index", "content"],
       favicon: './src/assets/favicons/favicon.ico'
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './src/assets/unity/*',
+          to: 'assets/unity',
+          flatten: true,
+        },
+        {
+          from: './src/assets/unity/img/*',
+          to: 'assets/unity/img',
+          flatten: true,
+        },
+        {
+          from: './src/assets/unity/css/*',
+          to: 'assets/unity/css',
+          flatten: true,
+        },
+        {
+          from: './src/assets/unity/js/*',
+          to: 'assets/unity/js',
+          flatten: true,
+        },
+      ],
     }),
   ],
   module: {
