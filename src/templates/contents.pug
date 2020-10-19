@@ -11,10 +11,10 @@ html(lang="en")
   body
     include nav.pug
     header.d-flex.justify-content-center.align-items-center
-      .container
-        h1= title
-        p.lead.pl-1= tagline
-        hr.my-4
+      .banner(class=banner)
+        .container
+          h1= title
+          p.lead.pl-1= tagline
 
     main
       .container
@@ -22,7 +22,7 @@ html(lang="en")
           .sidebar.col-lg-3
             .nav#contents
               h5 Contents
-              
+
               ul
                 //- Filled automatically from js
           .content.col-lg-9
@@ -45,6 +45,3 @@ html(lang="en")
                     - counter = counter + 1
 
     include footer.pug
-
-
-

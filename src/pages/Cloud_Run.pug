@@ -1,20 +1,13 @@
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
-    title Cloud Run
-    link(rel="shortcut icon" href="../assets/unity/favicon.ico")
-    link(rel="stylesheet" href="../assets/unity/css/style.css")
-    script(src="../assets/unity/js/UnityProgress.js")
-    script(src="../assets/unity/js/UnityLoader.js")
-    <script> var unityInstance = UnityLoader.instantiate("unityContainer", "../assets/unity/GiraffeTimeV2.json", {onProgress: UnityProgress}); </script>
-  body
-    a(href="/") Back to site
+extends ../templates/unity.pug
+
+block headVars
+    - var title = "Cloud Run"
+    - var tagline = "By Bram Spanoghe"
+    - var banner = "banner-fun"
+
+block game
     .webgl-content
         div(id="unityContainer" style="width: 960px; height: 600px")
         .footer
             .webgl-logo
             div(class="fullscreen" onclick="unityInstance.SetFullscreen(1)")
-            .title Cloud Run
-
-    include ../templates/footer.pug

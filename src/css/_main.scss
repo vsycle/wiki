@@ -19,6 +19,9 @@ body {
   transition: background-color 0.3s ease-out;
   background-image: url("../assets/img/background.png");
   background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @include respond-below(md) {

@@ -32,8 +32,33 @@ $tableBorder-dark: #4e4e4e;
 }
 
 header {
-  margin: 10rem 0 0 0;
   font-family: "Lato", sans-serif;
+
+  .banner {
+    margin: 70px 0 0 0;
+    padding: 5rem 0 0 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-project {
+    background: url("../assets/img/banner_project.jpg") no-repeat;
+  }
+  .banner-awards {
+    background: url("../assets/img/banner_awards.jpg") no-repeat;
+  }
+  .banner-fun {
+    background: url("../assets/img/banner_fun.png") no-repeat;
+  }
+  .banner-hp-outreach {
+    background: url("../assets/img/banner_hp&outreach.png") no-repeat;
+  }
+  .banner-parts {
+    background: url("../assets/img/banner_parts.jpg") no-repeat;
+  }
+  .banner-team {
+    background: url("../assets/img/banner_team.png") no-repeat;
+  }
 
   h1 {
     font-weight: 300;
