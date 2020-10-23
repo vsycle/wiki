@@ -1,0 +1,62 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Project"
+    - var tagline = "Engineering"
+    - var requireMathJax = false
+
+block article
+    :markdown-it(html)
+
+        # The Bacterial Ghost Construct
+
+        The carriers for the INP in the Vsycle cloud seeding agent are the so-called bacterial ghosts (BGs). BGs are empty cell envelopes of Gram-negative bacteria that expressed the lysis gene E. The functionality of this gene was discovered in 1966, after E. coli cells were infected with the bacteriophage PhiX174 (Hutchison et al, 1966). In our project this is done with E. coli cells. After expression protein E makes tunnels in the membrane of the bacteria causing it to expel its cytoplasmatic contents. This kills the bacteria in the process. However, any periplasmatic components, e.g. membrane bound proteins, that are associated with the empty envelope remain intact.  
+
+        Unlike many other lytic proteins, protein E has no enzymatic activity (Markert et al, 1965; Rodríguez-Rubio et al, 2016). It is a membrane protein that can oligomerize to form the transmembrane tunnels, usually at the centre or the poles of the bacteria (Witte et al, 1992). To achieve this, the protein uses a hydrophobic region at its N-terminal end to integrate itself in the inner membrane, leaving the C-terminal end in the cytoplasm. After a conformational change, the C-terminal domain is translocated to the periplasmatic space. Finally, the C-terminal domain is exposed to the cell surface, inducing the fusion of the inner and outer membranes and sealing off the periplasmatic space. This tunnel structure is enforced further by oligomerization. A schematic visualization is shown in Figure 1 (Langemann et al, 2010).
+
+    - var imgpath = "" + require("../assets/img/obama10.png")["default"]
+    +image(1, imgpath, "Schematic visualisation of the workings of protein E  (Langemann et al, 2010)")
+
+    :markdown-it
+
+        Through the tunnel, up to 90% of the cytoplasmatic content is released in the extracellular space (Kassmannhuber et al, 2017). The driving force for this is the osmotic pressure difference between the cytoplasm and the extracellular environment. An influx of water through the envelope, which is freely permeable for water, compensates the cytoplasmic losses and makes sure that the shape and rigidity of the cell remains intact. 
+
+        # Experiments
+
+        ## Construct design & cloning strategy
+
+
+    - var imgpath = "" + require("../assets/img/obama6.png")["default"]
+    +image(2, imgpath, "Construct design & cloning strategy?")
+    :markdown-it
+
+        In order to grow many bacterial ghosts, first the genetic construct that makes E. coli cells a bacterial ghost have to be designed. A plasmid with both the INP and protein E gene is needed. The INPs will be expressed on the surface of the bacteria, while protein E will ensure the bacterial ghost properties of the bacteria. First, a backbone with a pBAD arabinose inducible promoter, ribosome binding site (RBS) and terminator is made. This is done through PCR using __1_BBa_K584000__ as template and two primers: __1_K58400_BB_Fw__ and __1_K58400_BB_Rv__. This results in the backbone __1_BBa_K584000_Backbone__.  
+
+        Next a CPEC (Circular Polymerase Extension Cloning) is done using __1_BBa_K584000_Backbone__ and __2_Protein E + overhangs__ that results in a new plasmid: __3_pSB13C_[PBAD_ProtE]__. In order to achieve this, first 2_Protein E + overhangs are made using __2_Protein E__ as template on which 2 overlapping primers (__2_ProtE_overhang_Fw__ and __2_ProtE_overhang_Rv__) are attached. The overhangs on the protein E gene are compatible with the overhangs on the backbone making annealing possible. CPEC was chosen because it has multiple benefits over BioBricking. CPEC is a method that works without restriction enzymes and instead is based on homologies. On top of that, CPEC does not cause so called scars of left-over sequences the way the BioBrick system does. This means, contrary to the BioBrick system, that the whole reaction can be done in one eppendorf tube.          
+
+        Finally, the backbone with the protein E gene (__3_pSB13C_[PBAD_ProtE]__) can be used in the BioBrick system together with the cut-out of the INP gene (__4_BBa_K1896011__) in order to get the new BioBrick containing both inaZ (INP gene) and protE (Protein E gene) on the same backbone. 
+
+        ## Transformation – Antibiotic selection – Colony PCR – illumina seqencing
+
+        After the construct has been made, transformation of the E.coli cells will be done by electroporation. The purpose of electroporation is to introduce the DNA construct into the cells. When performing the transformation experiments, two controls are taken into account: a negative and a positive control. Non-transformed E.coli cells are used as a negative control while E.coli cells with a non-recombinant vector are used as a positive control. Both the recombinant cells and the positive control are transformed. Subsequently, the transformed cells, the negative and the positive control are plated. Because the negative control are cells that do not contain a vector, they don’t have antibiotic resistance and should not grow on LB-agar/Chloroamphenicol medium (Maervoet, João Maurício da Fonseca, & Watson, 2019). All possible outcomes regarding growth of the samples and the controls including possible causes are summarized in the Table below. 
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+
+        |Sample | Positive control | Negative control | Causes |
+        | ------------ | :-----------: | :-----------: | -----------:|
+        |Growth      |  Growth  | Growth| - Antibiotic is not active|
+        | | | | - One did not work in a sterile way|
+        | | | | - Contamination |
+        | | | | |
+        |Growth       |   Growth | No growth | - a|
+        | | | | - b|
+        | | | | - c |
+        [Table 1: A table]
+
+
+    :markdown-it
+        # References
+
+        We are too cool for references.
+
+
+//- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
