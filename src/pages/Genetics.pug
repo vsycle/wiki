@@ -23,8 +23,8 @@ block article
 
         # Experiments
 
-        ## Construct design & cloning strategy 
-        
+        ## Construct design & cloning strategy
+
 
     - var imgpath = "" + require("../assets/img/obama6.png")["default"]
     +image(2, imgpath, "Construct design & cloning strategy?")
@@ -33,10 +33,10 @@ block article
         In order to grow many bacterial ghosts, first the genetic construct that makes E. coli cells a bacterial ghost have to be designed. A plasmid with both the INP and protein E gene is needed. The INPs will be expressed on the surface of the bacteria, while protein E will ensure the bacterial ghost properties of the bacteria. First, a backbone with a pBAD arabinose inducible promoter, ribosome binding site (RBS) and terminator is made. This is done through PCR using __1_BBa_K584000__ as template and two primers: __1_K58400_BB_Fw__ and __1_K58400_BB_Rv__. This results in the backbone __1_BBa_K584000_Backbone__.  
 
         Next a CPEC (Circular Polymerase Extension Cloning) is done using __1_BBa_K584000_Backbone__ and __2_Protein E + overhangs__ that results in a new plasmid: __3_pSB13C_[PBAD_ProtE]__. In order to achieve this, first 2_Protein E + overhangs are made using __2_Protein E__ as template on which 2 overlapping primers (__2_ProtE_overhang_Fw__ and __2_ProtE_overhang_Rv__) are attached. The overhangs on the protein E gene are compatible with the overhangs on the backbone making annealing possible. CPEC was chosen because it has multiple benefits over BioBricking. CPEC is a method that works without restriction enzymes and instead is based on homologies. On top of that, CPEC does not cause so called scars of left-over sequences the way the BioBrick system does. This means, contrary to the BioBrick system, that the whole reaction can be done in one eppendorf tube.          
-        
+
         Finally, the backbone with the protein E gene (__3_pSB13C_[PBAD_ProtE]__) can be used in the BioBrick system together with the cut-out of the INP gene (__4_BBa_K1896011__) in order to get the new BioBrick containing both inaZ (INP gene) and protE (Protein E gene) on the same backbone. 
 
-        ## Transformation – Antibiotic selection – Colony PCR – illumina seqencing 
+        ## Transformation – Antibiotic selection – Colony PCR – illumina seqencing
 
         After the construct has been made, transformation of the E.coli cells will be done by electroporation. The purpose of electroporation is to introduce the DNA construct into the cells. When performing the transformation experiments, two controls are taken into account: a negative and a positive control. Non-transformed E.coli cells are used as a negative control while E.coli cells with a non-recombinant vector are used as a positive control. Both the recombinant cells and the positive control are transformed. Subsequently, the transformed cells, the negative and the positive control are plated. Because the negative control are cells that do not contain a vector, they don’t have antibiotic resistance and should not grow on LB-agar/Chloroamphenicol medium (Maervoet, João Maurício da Fonseca, & Watson, 2019). All possible outcomes regarding growth of the samples and the controls including possible causes are summarized in the Table below. 
     :markdown-it(html plugins=['markdown-it-multimd-table'])
@@ -51,7 +51,7 @@ block article
         | | | | - b|
         | | | | - c |
         [Table 1: A table]
-       
+
 
     :markdown-it
         # References

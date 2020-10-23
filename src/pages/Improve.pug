@@ -1,0 +1,11 @@
+extends ../templates/contents.pug
+
+block headVars
+    - var title = "Project"
+    - var tagline = "Improve"
+    - var requireMathJax = false
+
+block article
+    :markdown-it(html)
+
+    TODO
