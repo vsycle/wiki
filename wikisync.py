@@ -1,7 +1,7 @@
 import igem_wikisync as sync
 
 sync.run(
-    team='UGent1',
+    team='UGent_Belgium',
     src_dir='dist',
     build_dir='igem'
 )

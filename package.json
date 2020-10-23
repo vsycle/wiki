@@ -1,7 +1,7 @@
 {
   "name": "",
   "version": "1.0.0",
-  "description": "Wiki for iGEM 2020 UGent1",
+  "description": "Wiki for iGEM 2020 UGent_Belgium",
   "main": "index.js",
   "scripts": {
     "preprocess": "python3 utils/preprocess.py",

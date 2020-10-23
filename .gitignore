@@ -1,4 +1,9 @@
-node_modules
 .DS_Store
 .vscode
 *.cookies
+*.log
+upload_map.yml
+
+node_modules/
+igem/
+dist/
