@@ -46,3 +46,10 @@ h5 {
   line-height: normal;
   margin: 0;
 }
+
+.fixed-top-fix {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}

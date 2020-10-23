@@ -1,13 +1,12 @@
-
 include nav_list
 include mixins
 
-nav.navbar.navbar-expand-xl.fixed-top
+nav.navbar.navbar-expand-xl.fixed-top-fix
   .container.d-flex.justify-content-between
     a.navbar-brand.d-lg-inline-block(href=urlPrefix)
       img(src=require('Assets/img/logo.png')['default'])
 
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' 
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav'
                 aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
 
@@ -19,7 +18,7 @@ nav.navbar.navbar-expand-xl.fixed-top
               a.nav-link(href=urlPrefix + section.replace(/ /g,'_'))= section
           else
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle(id="navbar"+section['section']+"Dropdown" href="#" role="button" 
+              a.nav-link.dropdown-toggle(id="navbar"+section['section']+"Dropdown" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
                 | #{section['section']}
               .dropdown-menu(aria-labelledby="navbar"+section['section']+"Dropdown")
