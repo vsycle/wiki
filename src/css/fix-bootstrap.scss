@@ -47,10 +47,37 @@ h5 {
   margin: 0;
 }
 
+// fixes for igem.org
 .fixed-top-fix {
   position: fixed;
   right: 0;
   left: 0;
   top: 16px;
   z-index: 1030;
+}
+
+#globalWrapper {
+  height: 100%;
+}
+
+.mw-body {
+  height: 100%;
+}
+.mw-body > div {
+    height: 100%;
+}
+.mw-body > div > div {
+  height: 100%;
+}
+.mw-body > div > div > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.mw-body > div > div > div > p {
+  margin: 0;
+}
+
+div.visualClear {
+  height: 0 !important;
 }
