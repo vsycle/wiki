@@ -53,30 +53,6 @@ module.exports = {
       excludeChunks: ["index", "content"],
       favicon: './src/assets/favicons/favicon.ico'
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: './src/assets/unity/*',
-          to: 'assets/unity',
-          flatten: true,
-        },
-        {
-          from: './src/assets/unity/img/*',
-          to: 'assets/unity/img',
-          flatten: true,
-        },
-        {
-          from: './src/assets/unity/css/*',
-          to: 'assets/unity/css',
-          flatten: true,
-        },
-        {
-          from: './src/assets/unity/js/*',
-          to: 'assets/unity/js',
-          flatten: true,
-        },
-      ],
-    }),
   ],
   module: {
     rules: [
