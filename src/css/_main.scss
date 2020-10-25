@@ -72,3 +72,48 @@ body.dark {
     }
   }
 }
+
+.banner {
+  margin: 70px 0 0 0;
+  padding: 5rem 0 0 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+}
+
+.banner-project {
+  background: url("../assets/img/banner_project.jpg") no-repeat;
+  h1, p {
+    color: red;
+  }
+}
+.banner-awards {
+  background: url("../assets/img/banner_awards.png") no-repeat;
+  h1, p {
+    color: yellow;
+  }
+}
+.banner-fun {
+  background: url("../assets/img/banner_fun.png") no-repeat;
+  h1, p {
+    color: green;
+  }
+}
+.banner-hp-outreach {
+  background: url("../assets/img/banner_hp&outreach.png") no-repeat;
+  h1, p {
+    color: blue;
+  }
+}
+.banner-parts {
+  background: url("../assets/img/banner_parts.jpg") no-repeat;
+  h1, p {
+    color: bisque;
+  }
+}
+.banner-team {
+  background: url("../assets/img/banner_team.png") no-repeat;
+  h1, p {
+    color: white;
+  }
+}

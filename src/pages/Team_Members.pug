@@ -16,10 +16,10 @@ html(lang="en")
   body
     include ../templates/nav.pug
     header.d-flex.justify-content-center.align-items-center
-      .container
-        h1 Meet the Team
-        img(src=require('../assets/img/Team.jpg')['default'])
-
+      .banner(class=banner)
+        .container
+          h1
+          p.lead.pl-1
 
     main
       .container

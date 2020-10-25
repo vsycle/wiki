@@ -6,8 +6,11 @@
 }
 
 header {
-  margin: 10rem 0 0 0;
   font-family: "Lato", sans-serif;
+
+  .banner {
+    padding: 13rem 0 0 0;
+  }
 
   h1 {
     font-weight: 300;
