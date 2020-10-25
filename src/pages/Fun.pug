@@ -6,10 +6,12 @@ block headVars
     - var banner = "banner-fun"
 
 block article
+    :markdown-it(html)
+        # Animation video for outreach
+
+    video(controls style="width: 100%;")
+        source(src=require('Assets/video/animation_video_vsycle_subs.mp4')['default'] type="video/mp4")
 
     :markdown-it(html)
-
-
-        ##Funny video :)
-
-        #And also game
+        # And also game
+        Game link
