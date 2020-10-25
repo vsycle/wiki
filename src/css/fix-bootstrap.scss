@@ -47,17 +47,22 @@ h5 {
   margin: 0;
 }
 
-// fixes for igem.org
 .fixed-top-fix {
   position: fixed;
   right: 0;
   left: 0;
-  top: 16px;
+  top: 0;
   z-index: 1030;
 }
 
+// fixes for igem.org
+
 #globalWrapper {
   height: 100%;
+}
+
+.mw-body nav.fixed-top-fix {
+  top: 16px;
 }
 
 .mw-body {

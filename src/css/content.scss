@@ -89,6 +89,8 @@ header {
     font-weight: 500;
     height: auto;
     transition: none;
+    background: #aab8c2;
+    padding: 2rem 2rem 0 2rem;
 
     li {
       margin: 15px 0;
@@ -97,8 +99,9 @@ header {
       display: flex;
 
       svg {
-        margin-top: 4px;
-        height: 15px;
+        display: none;
+        //margin-top: 4px;
+        //height: 15px;
       }
       a {
         margin-left: 10px;
