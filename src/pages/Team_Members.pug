@@ -1,4 +1,12 @@
+//- extends ../templates/contents.pug
 include ../templates/mixins
+
+
+block headVars
+    - var title = "Team Members"
+    - var tagline = "Team"
+    - var requireMathJax = false
+    - var banner = "banner-team"
 
 html(lang="en")
   head
@@ -26,5 +34,6 @@ html(lang="en")
                 .card-body.text-center
                   h5.card-title #{member['name']}
                   p.card-text #{member['description']}
+
 
     include ../templates/footer.pug

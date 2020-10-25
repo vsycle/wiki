@@ -17,7 +17,7 @@ html {
 
 body {
   transition: background-color 0.3s ease-out;
-  background-image: url("../assets/img/background.png");
+  background-image: url("../assets/img/mainBG.svg");
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -26,7 +26,7 @@ body {
 
 @include respond-below(md) {
   body {
-    background-image: url("../assets/img/background-mobile.png");
+    background-image: url("../assets/img/mainBG.svg");
     background-size: cover;
   }
 }
