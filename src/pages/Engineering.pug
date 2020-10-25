@@ -3,7 +3,7 @@ extends ../templates/contents.pug
 block headVars
     - var title = "Engineering"
     - var tagline = "Project"
-    - var requireMathJax = false
+    - var requireMathJax = true
     - var banner = "banner-project"
 
 block article
@@ -11,7 +11,7 @@ block article
 
         # Module Engineering
 
-        In module genetics, we investigated  the optimal method for producing a biological cloud seeding agent containing __ice nucleation protein (INP)__. First, we selected the most promising INP candidate. Next, an easy and efficient expression system to functionally express INPs on the bacterial membrane was optimized. As chassis organism, we use E. coli cells. The INP gene of *Pseudomonas syringae*, InaZ (Han et al., 2017), is the most investigated INP and will be expressed in these *E. coli* cells. Besides, this INP is already successfully expressed both attached to the *E. coli* outer cell membrane as well as a soluble protein at the Centre of Synthetic Biology from Ghent University (UGent), by the __iGEM UGent  2016__ team. For this reason, InaZ from *Pseudomonas syringae* is chosen as the INP used in this project. When the INPs are successfully expressed on the bacterial surface of the cells, an inducible promotor is activated to express a protein that causes the cells to leak. This is the so-called bacterial ghost principle.
+        In module genetics, we investigated  the optimal method for producing a biological cloud seeding agent containing __ice nucleation protein (INP)__. First, we selected the most promising INP candidate. Next, an easy and efficient expression system to functionally express INPs on the bacterial membrane was optimized. As chassis organism, we use E. coli cells. The INP gene of *Pseudomonas syringae*, InaZ [Han et al., 2017](#citation1), is the most investigated INP and will be expressed in these *E. coli* cells. Besides, this INP is already successfully expressed both attached to the *E. coli* outer cell membrane as well as a soluble protein at the Centre of Synthetic Biology from Ghent University (UGent), by the __iGEM UGent  2016__ team. For this reason, InaZ from *Pseudomonas syringae* is chosen as the INP used in this project. When the INPs are successfully expressed on the bacterial surface of the cells, an inducible promotor is activated to express a protein that causes the cells to leak. This is the so-called bacterial ghost principle.
         
         Module genetics also focusses on methods to test the produced agent on its efficiency. To do this, first the ice nucleation activity is tested on supercooled water. The ice nucleation activity efficiency of INPs is generally tested by looking at the lowest sub-zero temperature at which supercooled water starts to freeze. Practically, this is done through a droplet-freezing assay. In this assay ice nuclei are added to a number of water droplets and the freezing temperature of the droplets with ice nuclei is determined by repeating the test with a series of temperatures and looking when the majority of droplets freeze. Since this method is both well described in literature and easy to perform, it is used to test the efficiency of the ice nucleation activity of the vesicles. Other than different temperatures, alternating concentrations of cells are to be tested further to see if this has an effect. 
 
@@ -19,64 +19,156 @@ block article
 
         # The Bacterial Ghost Construct
 
-        The carriers for the INP in the Vsycle   cloud seeding agent are the so-called bacterial ghosts (BGs). BGs are empty cell envelopes of Gram-negative bacteria that expressed the lysis gene E. The  functionality of this gene was discovered in 1966, after *E. coli* cells were infected with the bacteriophage PhiX174 (Hutchison et al, 1966). In our project this is done with *E. coli* cells. After expression protein E makes tunnels in the membrane of the bacteria causing it to expel its cytoplasmatic contents. This kills the bacteria in the process. However, any periplasmatic components, e.g. membrane bound proteins, that are associated with the empty envelope remain intact. 
+        The carriers for the INP in the Vsycle   cloud seeding agent are the so-called bacterial ghosts (BGs). BGs are empty cell envelopes of Gram-negative bacteria that expressed the lysis gene E. The  functionality of this gene was discovered in 1966, after *E. coli* cells were infected with the bacteriophage PhiX174 [Hutchison et al, 1966](#citation2). In our project this is done with *E. coli* cells. After expression protein E makes tunnels in the membrane of the bacteria causing it to expel its cytoplasmatic contents. This kills the bacteria in the process. However, any periplasmatic components, e.g. membrane bound proteins, that are associated with the empty envelope remain intact. 
+        
+        Unlike many other lytic proteins, protein E has no enzymatic activity [Markert et al, 1965](#citation1);[Rodríguez-Rubio et al, 2016](#citation4). It  is a membrane protein that can oligomerize to form the transmembrane tunnels, usually at the centre or the poles of the bacteria [Witte et al, 1992](#citation5). To achieve this, the protein uses a hydrophobic region at its N-terminal end to integrate itself in the inner membrane, leaving the C-terminal end in the cytoplasm. After a conformational change, the C-terminal domain is translocated to the periplasmatic space. Finally, the C-terminal domain is exposed to the cell surface, inducing the fusion of the inner and outer membranes and sealing off the periplasmatic space. This tunnel structure is enforced further by oligomerization. A  schematic visualization is shown in Figure 1 [Langemann et al, 2010](#citation6).
 
-        Unlike many other lytic proteins, protein E has no enzymatic activity (Markert et al, 1965; Rodríguez-Rubio et al, 2016). It  is a membrane protein that can oligomerize to form the transmembrane tunnels, usually at the centre or the poles of the bacteria (Witte et al, 1992). To achieve this, the protein uses a hydrophobic region at its N-terminal end to integrate itself in the inner membrane, leaving the C-terminal end in the cytoplasm. After a conformational change, the C-terminal domain is translocated to the periplasmatic space. Finally, the C-terminal domain is exposed to the cell surface, inducing the fusion of the inner and outer membranes and sealing off the periplasmatic space. This tunnel structure is enforced further by oligomerization. A  schematic visualization is shown in Figure 1 (Langemann et al, 2010).
-  
     - var imgpath = "" + require("../assets/img/Engineering_fig1.png")["default"]
     +image(1, imgpath, "Mechanism of lysis induced by protein E (Langemann et al, 2010)")
 
     :markdown-it(html)
 
-        Through the tunnel, up to 90% of the cytoplasmatic content is released in the extracellular space (Kassmannhuber et al, 2017). The driving force for this is the osmotic pressure difference between the cytoplasm and the extracellular environment. 
-
-    :markdown-it(html)
-
-        $$\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$$
-
-        $$-\frac{\hbar^2}{2m}\nabla^2\psi + V\psi = E\psi$$
-
-        $$i\hbar\gamma^\mu\partial_\mu\psi = mc\psi$$
-
-        $$y_k = \frac{1}{\sqrt{N}}\sum_{n=0}^{N-1}x_n\omega_N^{kn}$$
-        
+        Through the tunnel, up to 90% of the cytoplasmatic content is released in the extracellular space [Kassmannhuber et al, 2017](#citation7). The driving force for this is the osmotic pressure difference between the cytoplasm and the extracellular environment.
         
         # Experiments
 
         ## Construct design & cloning strategy
 
 
-    - var imgpath = "" + require("../assets/img/obama6.png")["default"]
-    +image(2, imgpath, "Construct design & cloning strategy?")
+    - var imgpath = "" + require("../assets/img/Engineering_fig2.png")["default"]
+    +image(2, imgpath, "Schematic representation of the design of the construct")
+    
     :markdown-it
 
-        In order to grow many bacterial ghosts, first the genetic construct that makes E. coli cells a bacterial ghost have to be designed. A plasmid with both the INP and protein E gene is needed. The INPs will be expressed on the surface of the bacteria, while protein E will ensure the bacterial ghost properties of the bacteria. First, a backbone with a pBAD arabinose inducible promoter, ribosome binding site (RBS) and terminator is made. This is done through PCR using __1_BBa_K584000__ as template and two primers: __1_K58400_BB_Fw__ and __1_K58400_BB_Rv__. This results in the backbone __1_BBa_K584000_Backbone__.  
+        In order to grow many bacterial ghosts expressing INPs on their surface, first the genetic construct was designed. A plasmid with both the INP and protein E gene is constructed .  The INPs will be expressed on the surface of the bacteria, while protein E will ensure the death of the bacteria. First, a backbone with a pBAD arabinose inducible promoter, ribosome binding site (RBS) and terminator is made. This is done through PCR using __1_BBa_K584000__ as template and two primers: __1_K58400_BB_Fw__ and __1_K58400_BB_Rv__. This results in the backbone __1_BBa_K584000_Backbone__.         
+        
+        Next, a CPEC (Circular Polymerase Extension Cloning) is done using __1_BBa_K584000_Backbone__ and __2_Protein E + overhangs__, which results in a new plasmid: __3_pSB13C_[PBAD_ProtE]__. In order to achieve this, first __2_Protein E + overhangs__ are made using __2_Protein E__ as template on which 2 overlapping primers (__2_ProtE_overhang_Fw__ and __2_ProtE_overhang_Rv__) are attached. The sticky ends  on the protein E gene are homologous with the sticky end on the backbone making annealing possible. CPEC was chosen because it has multiple benefits  over BioBricking. CPEC is a method that works without restriction enzymes and instead is based on homologies. On top of that, CPEC does not cause so called scars of left-over sequences the way the BioBrick system does. This means, contrary to the BioBrick system, that the whole reaction can be done in one eppendorf tube.
+        
+        Finally, the backbone with the protein E gene (__3_pSB13C_[PBAD_ProtE]__) can be used in the BioBrick system together with the cut-out of the INP gene (__4_BBa_K1896011__) in order to get the new BioBrick containing both inaZ (INP gene) and protE (Protein E gene) on the same backbone.
+        
+        ## Transformation – Antibiotic selection – Colony PCR – Illumina sequencing
 
-        Next a CPEC (Circular Polymerase Extension Cloning) is done using __1_BBa_K584000_Backbone__ and __2_Protein E + overhangs__ that results in a new plasmid: __3_pSB13C_[PBAD_ProtE]__. In order to achieve this, first 2_Protein E + overhangs are made using __2_Protein E__ as template on which 2 overlapping primers (__2_ProtE_overhang_Fw__ and __2_ProtE_overhang_Rv__) are attached. The overhangs on the protein E gene are compatible with the overhangs on the backbone making annealing possible. CPEC was chosen because it has multiple benefits over BioBricking. CPEC is a method that works without restriction enzymes and instead is based on homologies. On top of that, CPEC does not cause so called scars of left-over sequences the way the BioBrick system does. This means, contrary to the BioBrick system, that the whole reaction can be done in one eppendorf tube.          
-
-        Finally, the backbone with the protein E gene (__3_pSB13C_[PBAD_ProtE]__) can be used in the BioBrick system together with the cut-out of the INP gene (__4_BBa_K1896011__) in order to get the new BioBrick containing both inaZ (INP gene) and protE (Protein E gene) on the same backbone. 
-
-        ## Transformation – Antibiotic selection – Colony PCR – illumina seqencing
-
-        After the construct has been made, transformation of the E.coli cells will be done by electroporation. The purpose of electroporation is to introduce the DNA construct into the cells. When performing the transformation experiments, two controls are taken into account: a negative and a positive control. Non-transformed E.coli cells are used as a negative control while E.coli cells with a non-recombinant vector are used as a positive control. Both the recombinant cells and the positive control are transformed. Subsequently, the transformed cells, the negative and the positive control are plated. Because the negative control are cells that do not contain a vector, they don’t have antibiotic resistance and should not grow on LB-agar/Chloroamphenicol medium (Maervoet, João Maurício da Fonseca, & Watson, 2019). All possible outcomes regarding growth of the samples and the controls including possible causes are summarized in the Table below. 
+        After the construct has been made, transformation of the E. coli cells will be done by electroporation. The purpose of electroporation is to introduce the DNA construct into the cells. When performing the transformation experiments, two controls are taken into account: a negative and a positive control. Non-transformed *E. coli* cells are used as a negative control while *E. coli* cells with a non-recombinant vector are used as a positive control. Both the recombinant cells and the positive control are transformed. Subsequently, the transformed cells, the negative and the positive control are plated. Because the negative control are cells that do not contain a vector, they do not have antibiotic resistance and should not grow on LB-agar/Chloroamphenicol medium [Maervoet, João Maurício da Fonseca, & Watson, 2019](#citation8). All possible outcomes regarding growth of the samples and the controls including possible causes are summarized in the Table below (Table 1).    
+        
     :markdown-it(html plugins=['markdown-it-multimd-table'])
 
         |Sample | Positive control | Negative control | Causes |
         | ------------ | :-----------: | :-----------: | -----------:|
-        |Growth      |  Growth  | Growth| - Antibiotic is not active|
-        | | | | - One did not work in a sterile way|
-        | | | | - Contamination |
-        | | | | |
-        |Growth       |   Growth | No growth | - a|
-        | | | | - b|
-        | | | | - c |
-        [Table 1: A table]
-
+        |Growth | Growth | Growth | - Antibiotic is not active<br/> - One did not work in a sterile way<br/> - Contamination|
+        |Growth | Growth | No Growth | - Test succeeded<br/> - Antibiotic is active<br/> - No contamination|
+        |No Growth | Growth | No Growth | - Antibiotic is active<br/>- No contamination<br/>- Cloning failed|
+        |No Growth | No Growth | Growth | - Antibiotic is not active<br/> - Contamination<br/> - Transformation failed; cells died|
+        |No Growth | No Growth | No Growth | - Antibiotic is active<br/> - No contamination<br/> - Transformation failed; cells died|
+        [Table 1: Overview of possible outcomes regarding growth of the samples and controls.]
 
     :markdown-it
-        # References
 
-        We are too cool for references.
+        After the transformation has been performed and the plating is done, it must be checked that the plasmid contains both the INP and the lysis gene. The plasmid used for cloning contains an antibiotic marker for chloroamphenicol. By plating the bacteria on LB agar/Chloroamphenicol after cloning, a first selection can be made. Bacteria that contain a vector, either  a linear vector or just an insert, will not grow on these media as they do not contain the chloroamphenicol resistance gene or because transcription processes cannot be performed. Transformed E. coli cells with a circular vector can grow. However, this vector can be a vector without an insert, a vector with the desired or the undesired insert [Maervoet et al., 2019](#citation9). Consequently, it is important to detect this here as well. This can be done by applying colony PCR. This technique determines the length of the insert. In this case, the vector contains two genes: the gene for INP production and the lysis gene. However, only one amplification product will be made that involves both inserts.
 
+        Before colony PCR can be performed, a number of colonies need to be picked up from the LB/Chloroamphenicol plates. It is important to regrow these colonies and to label the petri dishes properly. This way, after the *E. coli* cells with the desired insert are identified, one can work further with the right colony. This is shown schematically in the Figure below (Figure 3).
 
+    - var imgpath = "" + require("../assets/img/Engineering_fig3.png")["default"]
+    +image(3, imgpath, "Picking up a colony and labelling plates before starting the colony PCR")
+    
+    :markdown-it(html)
+
+        To perform colony PCR, vector specific primers are used. These are primers that are complementary to the vector and flank its multiple cloning site (MCS). As mentioned before, colony PCR can be used to differentiate between a vector without insert or a vector with (un)desired insert. This is because the amplification product after applying the technique differs in length. The amplification product of a vector with (un)desired insert will always be longer than the amplification product of a non-recombinant vector. By separating the obtained fragments by gel electrophoresis, it can be determined whether or not a cell contains an insert [Kyndt, Van Damme, & De Mey, 2019](#citation10); [Maervoet et al., 2019](#citation11). For this purpose, the length of the genes and the amplified part of the MCS must be determined in advance and a comparison must be made with a molecular ladder. It is known that the INP gene is 3603 bp long and the protein E gene of Phage phiX174 is 279 bp long [Van Brempt & Van Hove, 2016](#citation12); [Wang, 2013](#citation13). If a band is found on the gel that deviates from the size of the desired insert, no insert or another insert is cloned into the plasmid. If a band matches the desired size, it can be considered that these *E. coli* cells contain the desired insert. Then this colony will be picked up again and grown up on a new LB agar/Chloroamphenicol plate to make sure the right colony can be used later on in the fermentation process [Maervoet et al., 2019](#citation11).
+
+    - var imgpath = "" + require("../assets/img/Engineering_fig4.png")["default"]
+    +image(4, imgpath, "Picking up and regrowing the right colony after performing the colony PCR.")
+
+    :markdown-it(html)
+
+        Even if the cloned genes turn out to be the desired insert based on its size, this does not guarantee the absence of any mutations. Consequently, this also needs to be investigated and the plasmid is isolated from the appropriate *E. coli* cells. The obtained insert is then sequenced by the external company Macrogen Europe.
+
+        ## Fermentation
+
+        The bacteria are grown through fermentation. This is done based on the procedure described by Langemann et al. [Langemann et al., 2010](#citation12). First, inoculation is performed, followed by a growth phase. Here the bacteria are able to grow in the appropriate conditions for 90 minutes. As a growth medium, a lysogeny broth (LB) medium is chosen. This is a complex medium, that is often used and results in a lot of biomass. However, M9 is cheaper than LB medium so that this can be used as an alternative to grow cells. Parameters that have to be controlled during the growth phase are listed in the table below (Table 2).
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+
+        |Parameter | Value | Explanation |
+        | ------------ | :-----------: | -----------:|
+        |Temperature | 37°C | Lower temperatures will result in more expression, since the folding is better and less inclusion bodies are formed. Nonetheless, this is not optimal for our setup and a temperature of 37°C is selected.|
+        |pH | 6.9 | Optimal pH for this fermentation.|
+        |Dissolved oxygen (saturation level) | 20% | 20% saturation is used to create aerobic conditions in order to avoid anaerobic fermentation.|
+        |Stirring | N.D. | Stirring level has to be adjusted according to the growth phase.|
+        |Aeration | N.D. | Aeration will be adjusted according to the growth phase.|
+        [Table 2: Overview of parameters that have to be controlled during the fermentation. N.D. = Not defined]
+
+    :markdown-it(html)
+
+        Secondly, a constitutive promoter is used. This means that the INP expression starts immediately, without the need of an inducer. Finally, cell lysis is induced when the stationary phase of growth started. This is determined using optical density (OD) coupled with cell dry weight (CDW) or colony-forming unit (CFU). Examples of these relationships for an E. coli strain are given below.
+
+        $$CDW [g/l] = 0.386 * OD [arb. unit] - 0.0013$$
+
+        $$CFU [\text{\#}/mL] = 2.72 * 10^{17} * OD [arb. unit] - 2.7*10^{16}$$
+
+        Important to remember is that these equations have to be determined again for our specific strain of *E. coli*. After cell lysis is initiated, a drop in OD value will be detected. This is due to the fact that bacteria get more translucent after lysis. For our setup, OD values will be determined at 600 nm [Langemann et al., 2010](#citation6).
+
+        During the growth phase, a sample is taken every hour to follow up all the batches. For these samples, the OD and the CFU/CDW are determined. This is done to follow up the growth rate. In practice, this means a dilution series is set up form 10-1 until 10-6. The OD is then determined for this dilution series and the dilutions 10-3 up until 10-6 get plated. As such, the OD can be related to another type of metric like CFU or CDW in order to get a quantitative estimation of the growth [Langemann et al., 2010](#citation6).
+
+        During the lysis phase of the fermentation additional samples of the culture are taken. Of these samples three things are measured: CFU, OD<sub>600</sub> and transparency under a light microscope. This to follow the progress of the lysis phase. Both determining the OD<sub>600</sub>  of the culture and studying the bacteria under a light microscope are methods commonly used as a qualitative indicator of the E-mediated lysis quality [Langemann et al, 2010](#citation6). These methods rely on the fact that the bacteria become translucent after they have been lysated, which can be seen under a light microscope. Successful E-lysis is characterised by a drop of the OD<sub>600</sub>  over the course of the fermentation.
+
+        After fermentation, the batch of cells must undergo further downstream processing. First of all, the biomass of the medium is separated by means of Tangential Flow Filtration (TFF) [Langemann et al., 2010](#citation6).. As an alternative to TFF, centrifugation (at 10 000 g) can also be used on a smaller scale [Amara, Salem-Bekhit, & Alanazi, 2013](#citation14); [Rabea et al., 2018](#citation15). In order to guarantee that the product does not contain GMO’s, all remaining viable cells and DNA have to be destroyed. This can be done by using β-propiolactone [Amara et al., 2013](#citation16); [Hajam, Dar, Won, & Lee, 2017])(#citation17). This chemical is a water-soluble organic component with alkylating properties [Langemann, 2011](#citation18). After reaction with the nucleic acids of the DNA, the structure of purine and pyrimidine residues will be altered resulting in nicks or causing the formation of cross-links between the two DNA helices [Perrin & Morgeaux, 1995](#citation19). Instead of β-priopolactone, hydrogen peroxide (H2O2) can also be used to inactivate remaining DNA [Hajam et al., 2017](#citation20). Subsequently, the biomass is separated from other cell material and chemicals by applying diafiltration. Finally, the cells are washed several times with sterile water [Langemann et al., 2010](#citation6).
+
+        ## E-lysis efficiency
+
+        Another thing that needs to be tested, is whether the *E. coli* cells have been successfully transformed to bacterial ghosts and how efficiently this happened. To do this, a sample of the bacterial culture before induction of the BG gene is taken. After performing a dilution series, 100 µl of each dilution is plated immediately on LB medium. The same is done after induction. In both cases the CFU is determined to calculate the lysis ratio (LE) with the following formula:
+
+        $$LE=(1-\frac{CFU_{t}}{CFU_{t_{0}}}*100\text{\%})$$
+
+        As a negative control, the same experiment is done with *E. coli* cells which are not lysed.
+
+        The different outcomes for this experiment and their interpretations are described in Table 3.
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+
+        |Efficiency | Interpretation | Further investigation|
+        | ------------ | -----------: | -----------:|
+        | > 98-99% | - Experiment has succeeded | |
+        | < 98-99% | - Fermentation after induction was not long enough<br/> - Aberrant pH<br/> - Aberrant fermentation temperature<br/> - Aberrant oxygen level<br/> - Aberrant pressure<br/> - Aberrant amount of nutrients | |
+        | +/- 0% | - Lysis has not occurred, protein E might not have been formed | - Studying on RNA level (QPCR) |
+ 
+        [Table 3: The different outcomes for this experiment, their interpretations and possible investigations in the case of unwanted results]
+
+    :markdown-it(html)
+
+        During the lysis phase of the fermentation additional samples of the culture are taken. Of these samples three things are measured: CFU, OD<sub>600</sub> and transparency under a light microscope. This is to follow the progress of the lysis phase. Both determining the OD<sub>600</sub> of the culture and studying the bacteria under a light microscope are methods commonly used as a qualitative indicator of the E-mediated lysis quality [Langemann et al, 2010](#citation6). These methods rely on the fact that the bacteria become translucent after they have been lysated, which can also be seen under a light microscope. Successful E-lysis is characterised by a drop of the OD<sub>600</sub> over the course of the fermentation.
+
+        ## Testing the expression of the INP
+
+        To test if the INPs are successfully expressed on the outer membrane of the *E. coli* cells (A), tests using supercooled water can be performed. More specifically, this is done by transferring 50 µL of the fermentation media in a test tube containing 50 µL of supercooled water at -6°C if an ethanol cooling bath is used. If the supercooled water freezes after adding the bacteria, this means that the INPs have been expressed. To prove not just any protein can initiate ice nucleation, a negative control is used. For this purpose, *E. coli* cells that do not express INP but GFP (B) are tested. These should not result in the freezing of the supercooled water. The different possible outcomes for this experiment and their interpretations are described in Table 4.
+
+    :markdown-it(html plugins=['markdown-it-multimd-table'])
+
+        |Result | Interpretation | Additional tests|
+        | ------------ | -----------: | -----------:|
+        | Supercooled water freezes after adding A, but not after adding B | Experiment has succeeded, INP is expressed on the membrane | |
+        | Supercooled water freezes after adding both A and B | - Supercooled water contains impurities that initiate ice nucleation<br/> - Supercooled water has been moved to abruptly, causing ice nucleation | Filtration of the supercooled water |
+        | Supercooled water does not freeze after adding both A and B | INP has not been expressed:<br/> - Problem with promotor<br/> - Problem with induction of promotor<br/> - Problem with protein folding<br/> - Protein is unable to reach the outer membrane<br/> - Protein could not be formed due to lack of nutrients | Studying the protein expression:<br/> - Proteomics<br/> - SDS page<br/> - Adding a His-tag to the INP and using compatible antibodies<br/><br/> Studying on RNA level<br/> - QPCR<br/><br/> Studying under microscope to see if inclusion bodies have been formed |
+        | Supercooled water freezes after adding B, but not after adding A | Human error | |
+        [Table 4: The different outcomes for this experiment, their interpretations and possible investigations in the case of unwanted results]
+
+    :markdown-it(html)
+
+        ## Ice nucleation efficiency
+
+        To test the ice nucleation efficiency of the *E. coli* cells/BGs with INPs on their membrane and the concentrations needed to freeze supercooled water, a droplet freezing assay is used. This method is used in general to determine the ice nucleation efficiencies of ice nuclei. The assay used here is based on the droplet freezing assay used by [Kasmannhuber et al.  (2017)](#citation21). In this assay, a series of tenfold dilutions of the BGs (ranging from 5 x 10<sup>8</sup> cells ml<sup>-1</sup> to 5 x 10<sup>4</sup> cells ml<sup>-1</sup>) is made. From each of these dilutions, 54 droplets (10 µl) are placed on a sterile aluminium plate with a hydrophobic film. After using a cooling unit to adjust the temperature of the plate the droplets are supercooled. By looking at the number of droplets that are frozen at a certain temperature, the ice nucleation efficiency can be determined. For this a temperature range between -13 an -2 °C is used, raised at a constant interval of 0.5 or 1 °C. Each time, the temperature on the plate is maintained for 30 seconds.
+
+        Two parameters that characterise the ice nucleation efficiency can be determined from this experiment. The first one is the median freezing temperature (T<sub>50</sub>). This is the temperature where 50% of the droplets are frozen. This can be calculated from the following formula [Kishimoto et al., 2014](#citation22):
+
+        $$T_{50}=\frac{T_1+(T_2-T_1)(2^{-1}n-F_1)}{F_2-F_1}$$
+
+        Where F1 and F2 are the number of frozen drops at temperature T1 and adjacent temperature T2, and are just below and above 50% of the total number of tested drops (n).
+
+        The second parameter is the cumulative number N(T), which describes the number of ice nuclei ml<sup>-1</sup> at a given temperature. It is calculated from the following formula [Govindarajan and Lindow, 1988](#citation23):
+
+        $$N(T)=-\ln{f}*\frac{10^D}{V}$$
+
+        f is the fraction of droplets not frozen at a specific temperature T. f is described as total number of droplets used divided by unfrozen droplets (N<sub>0</sub>/ N<sub>U</sub>). V refers to the volume of each droplet used (10 µl). D is the number of 10^<sup>-1</sup> serial dilutions of the original suspension. To obtain the nucleation frequency (NF) per cell by dividing ice nuclei/ml through cell density (cell/ ml), N(T) is normalized for the number of cells present in each solution.
+        
+
+prepend citations
+    - var citations = [{'authors': ' Amara, A. A., Salem-Bekhit, M. M., & Alanazi, F. K. (2013). ', 'doi': 'https://doi.org/10.1155/2013/545741', 'journal': ' The Scientific World Journal. ', 'title': ' Sponge-like: A new protocol for preparing bacterial ghosts. ', 'type': 'article'}, {'authors': ' Brempt, M., & Van Hove, B. (2016). ', 'details': 'Retrieved on August 02, 2020. from ', 'title': ' InaZ (GG safe). ', 'type': 'webpage', 'url': 'http://parts.igem.org/wiki/index.php?title=Part:BBa_K1896002'}, {'authors': ' Haidinger, W., Szostak, M. P., Jechlinger, W., & Lubitz, W. (2003). ', 'doi': 'https://doi.org/10.1128/AEM.69.1.468-474.2003', 'journal': ' Applied and Environmental Microbiology. ', 'title': ' Online monitoring of Escherichia coli ghost production. ', 'type': 'article'}, {'authors': ' Hajam, I. A., Dar, P. A., Won, G., & Lee, J. H. (2017). ', 'doi': 'https://doi.org/10.1186/s13567-017-0442-5', 'journal': ' Veterinary Research. ', 'title': ' Bacterial ghosts as adjuvants: Mechanisms and potential. ', 'type': 'article'}, {'authors': ' Han, Y. J., Song, H., Lee, C. W., Ly, N. H., Joo, S.-W., Lee, J. H., Kim, S.-J., and Park, S. (2017).', 'doi': 'https://doi.org/10.1016/j.ijbiomac.2016.10.062 ', 'journal': ' International journal of biological macromolecules ', 'numbers': '94:634–641. ', 'title': ' Biophysical characterization of soluble pseudomonas syringae ice nucleation protein inaz fragments. ', 'type': 'article'}, {'authors': ' Hutchison III, C. A., & Sinsheimer, R. L. (1966).', 'doi': 'https://doi.org/10.1016/0042-6822(65)90256-4', 'journal': ' Journal of molecular biology ', 'numbers': '18(3), 429-IN2', 'title': ' The process of infection with bacteriophage ΦX174: X. Mutations in a ΦX lysis gene. ', 'type': 'article'}, {'authors': ' Kassmannhuber, J., Rauscher, M., Schöner, L., Witte, A., & Lubitz, W. (2017). ', 'doi': 'https://doi.org/10.1080/21655979.2017.1284712', 'journal': ' Bioengineered ', 'numbers': '8(5), 488-500. ', 'title': ' Functional display of ice nucleation protein InaZ on the surface of bacterial ghosts. ', 'type': 'article'}, {"authors": " Kishimoto, T., Yamazaki, H., Saruwatari, A., Murakawa, H., Sekozawa, Y., Kuchitsu, K., ... & Ishikawa, M. (2014). ", "doi": "https://doi.org/10.1093/aobpla/plu044", "journal": " AoB Plants ", "numbers": "6. ", "title": " High ice nucleation activity located in blueberry stem bark is linked to primary freeze initiation and adaptive freezing behaviour of the bark. ", "type": "article"}, {'authors': ' Kyndt, T., Van Damme, E., & De Mey, M. ', 'title': ' Gene technology ', 'type': 'book', 'year_published': '2013'}, {'authors': ' Langemann, T. (2011). ', 'doi': 'http://othes.univie.ac.at/15287/1/2011-05-24_0847940.pdf#page=81', 'journal': ' Bioengineered. ', 'title': ' Process development for industrial scale bacterial ghost production. ', 'type': 'article'}, [], {'authors': ' Langemann, T., Koller, V. J., Muhammad, A., Kudela, P., Mayr, U. B., & Lubitz, W. (2010). ', 'doi': 'https://doi.org/10.4161/bbug.1.5.12540', 'journal': ' Bioengineered Bugs. ', 'title': 'The bacterial ghost platform system.', 'type': 'article'}, {'authors': ' Maervoet, V., João Maurício da Fonseca, M., & Watson, H.', 'title': ' Gene technolgy practical excercises. ', 'type': 'book', "year_published": "2019"}, {'authors': ' Markert, A., & Zillig, W. (1965). ', 'doi': 'https://doi.org/10.1016/0042-6822(65)90256-4', 'journal': ' Virology ', 'numbers': '25(1), 88-97', 'title': ' Studies on the lysis of Escherichia coli C by bacteriophage φX174. ', 'type': 'article'}, {'authors': ' Perrin, P., & Morgeaux, S. (1995).', 'doi': 'https://doi.org/10.1006/biol.1995.0034', 'journal': 'Biologicals.', 'title': ' Inactivation of DNA by β-propiolactone. ', 'type': 'article'}, {'authors': ' Rabea, S., Salem-Bekhit, M. M., Alanazi, F. K., Yassin, A. S., Moneib, N. A., & Hashem, A. E. M. (2018). ', 'doi': 'https://doi.org/10.1016/j.jsps.2017.12.006', 'journal': ' Saudi Pharmaceutical Journal. ', 'title': ' A novel protocol for bacterial ghosts’ preparation using tween 80. ', 'type': 'article'}, {'authors': ' Rodríguez-Rubio, L., Gutiérrez, D., Donovan, D. M., Martínez, B., Rodríguez, A., & García, P. (2016). ', 'doi': 'https://doi.org/10.3109/07388551.2014.993587', 'journal': ' Critical reviews in biotechnology ', 'numbers': '36(3), 542-552. ', 'title': ' Phage lytic proteins: biotechnological applications beyond clinical antimicrobials. ', 'type': 'article'}, {'authors': ' Wang, J. (2013). ', 'details': 'Retrieved on August 29, 2020. from ', 'title': ' Protein E of Phage phiX174. ', 'type': 'webpage', 'url': 'http://parts.igem.org/Part:BBa_K1054000'}, {'authors': ' Witte, A., Wanner, G., Sulzner, M., & Lubitz, W. (1992).', 'doi': 'https://doi.org/10.1007/BF00248685', 'journal': ' Archives of microbiology ', 'numbers': '157(4), 381-388. ', 'title': 'Dynamics of PhiX174 protein E-mediated lysis of Escherichia coli. ', 'type': 'article'}]
 //- DO NOT MODIFY THIS LINE AND ANYTHING BEYOND.
