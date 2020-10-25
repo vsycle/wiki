@@ -11,23 +11,27 @@ footer {
   background-color: $footer-background;
   transition: background-color 0.3s ease;
   margin-top: auto;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem;
   color: white;
   font-family: "Lato";
   font-size: 1rem;
 
   .sponsor-item {
     align-self: center;
-  }
-  .sponsor-item.sm {
     max-width: 200px;
+    margin-top: auto;
   }
+
   .sponsor-item.lg {
-    max-width: 400px;
+    max-width: 250px;
   }
 
   .sponsor-item > img {
     width: 100%;
+  }
+
+  .social {
+    margin: 0 2rem 0 4rem;
   }
 
   .social-item {
