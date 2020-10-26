@@ -22,18 +22,78 @@ html(lang="en")
           p.lead.pl-1
 
     main
+      - var teamMembers = [{'name': "Bram Spanoghe", 'cls': 'member-bram', 'modal': '#modal-bram'}, {'name': "Brent Vanvyaene", 'cls': 'member-brent', 'modal': '#modal-brent'}, {'name': "Lander De Vos", 'cls': 'member-lander', 'modal': '#modal-lander'}, {'name': "Laure Craeye", 'cls': 'member-laure', 'modal': '#modal-laure'}, {'name': "Marvi van Tongeren", 'cls': 'member-marvi', 'modal': '#modal-marvi'}, {'name': "Shauny Van Hoye", 'cls': 'member-shauny', 'modal': '#modal-shauny'}]
+      - var principalInstructors = [{'name': "Marjan", 'cls': 'pi-marjan', 'modal': '#modal-marjan'}, {'name': "Wim", 'cls': 'pi-wim', 'modal': '#modal-wim'}]
+      - var instructors = [{'name': "Michiel", 'cls': 'instr-michiel', 'modal': '#modal-michiel'}, {'name': "Jose", 'cls': 'instr-jose', 'modal': '#modal-jose'}]
       .container
+        h1 Team
         .row.d-flex.justify-content-center
-          - var teamMembers = [{'name': "Bram Spanoghe", 'description': "Professional goose", 'cls': 'member-bram'}, {'name': "Brent Vanvyaene", 'description': "It's tea time", 'cls': 'member-brent'}, {'name': "Lander De Vos", 'description': "For the kingdom", 'cls': 'member-lander'}, {'name': "Laure Craeye", 'description': "Where am I?", 'cls': 'member-laure'}, {'name': "Marvi van Tongeren", 'description': "Just marvelous", 'cls': 'member-marvi'}, {'name': "Shauny Van Hoye", 'description': "Successor of Mr. Proper", 'cls': 'member-shauny'}]
           each member in teamMembers
-            .col-lg-4.col-md-6.col-sm-12
+            .col-lg-6.col-md-12.team-member(id=member['cls'] data-toggle="modal" data-target=member['modal'])
               .hexagon
                 .hexagon-in1
                   .hexagon-in2(class=member['cls'])
               .card
                 .card-body.text-center
                   h5.card-title #{member['name']}
-                  p.card-text #{member['description']}
 
+        h1 Principal Instructors
+        .row.d-flex.justify-content-center
+          each member in principalInstructors
+            .col-lg-6.col-md-12.team-member(id=member['cls'] data-toggle="modal" data-target=member['modal'])
+              .hexagon
+                .hexagon-in1
+                  .hexagon-in2(class=member['cls'])
+              .card
+                .card-body.text-center
+                  h5.card-title #{member['name']}
+
+        h1 Instructors
+        .row.d-flex.justify-content-center
+          each member in instructors
+            .col-lg-6.col-md-12.team-member(id=member['cls'] data-toggle="modal" data-target=member['modal'])
+              .hexagon
+                .hexagon-in1
+                  .hexagon-in2(class=member['cls'])
+              .card
+                .card-body.text-center
+                  h5.card-title #{member['name']}
+
+
+      .modal.fade(id="modal-bram" tabindex="-1" role="dialog"  aria-hidden="true")
+        .modal-dialog(role="document")
+          .modal-content
+            .modal-header
+              h4.modal-title Bram Spanoghe
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                  span(aria-hidden="true") &times;
+            .modal-body
+              h6 Master in Science in Bioscience Engineering: Cell and Gene Biotechnology
+              ul
+                li Age: 1021 y/o
+                li Favorite sport: badminton o(*°▽°*)o
+                li Favorite pets: Chickens <(o )
+                li Favorite mammal: The noble bunny
+                li Favorite bacterium: All Rhizobia
+                li Favorite quote: “Thanks Obama” - Barack Obama
+                li Reasons for participating in iGEM: Accumulating international fame is a crucial step in becoming a succesful mad scientist
+
+      .modal.fade(id="modal-marjan" tabindex="-1" role="dialog"  aria-hidden="true")
+        .modal-dialog(role="document")
+          .modal-content
+            .modal-header
+              h4.modal-title Marjan Something
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                  span(aria-hidden="true") &times;
+            .modal-body
+              h6 Master in Science in Bioscience Engineering: Cell and Gene Biotechnology
+              ul
+                li Age: the answer to the Ultimate Question of Life
+                li Favorite sport:  mind games
+                li Favorite pets: anything but spiders
+                li Favorite mammal: wildcat
+                li Favorite micro-organism: non-model microorganisms, as there is still much to discover
+                li Favorite quote:  "Never waste a good crisis" - maybe Winston Churchill
+                li Reasons for participating in iGEM: to reach for the sky
 
     include ../templates/footer.pug
