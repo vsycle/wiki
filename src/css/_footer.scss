@@ -16,6 +16,12 @@ footer {
   font-family: "Lato";
   font-size: 1rem;
 
+  .sponsor.d-flex.flex-column {
+    flex: 25%;
+    padding: 5px;
+  }
+
+
   .sponsor-item {
     align-self: center;
     max-width: 200px;
