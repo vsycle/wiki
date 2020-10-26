@@ -2,36 +2,56 @@ extends ../templates/contents.pug
 
 block headVars
     - var title = "Awards"
-    - var tagline = ""
+    - var tagline = "Medal criteria"
     - var requireMathJax = true
     - var banner = "banner-awards"
 
 block article
 
     :markdown-it(html)
-        Can we has participation trophy (>人<) ?  
-        This is a regular paragraph.
-        #### This is a level 4 heading.
-        [This is a link](google.com)
+        
+        # Bronze
 
-    - var imgpath = "" + require("../assets/img/Description--josh-withers.jpg")["default"]
-    +image(1, imgpath, "Caption", 100)
+        * Competition Deliverables 
 
-    :markdown-it(html)
-        Back to regular text.
+        Our team has created a wiki page as well as a poster. Moreover, a presentation and a project promotion video have been made. The Judging form has been completed as well.  
 
-        # Tables
+        * Attributions 
 
-        This is a regular paragraph, which precedes the table.
-        When you want to insert a table, indent one level back and specify the plugin.
-        Then indent inside again and start writing the table.
+        Our project is divided in five modules. Each team member was responsible for at least two of them. As a team, we were lucky that a lot of external members, friends and family helped us during our journey. See our [Attribution page](https://2020.igem.org/Team:UGent_Belgium/Attributions) for a detailed overview. 
 
-    :markdown-it(html plugins=['markdown-it-multimd-table'])
-        | This is | the table | header row |
-        | ------  | --------- | ---------- |
-        | 1       | 2         | 3          |
-        | 4       | 5         | 6          |
-        [Table 1: Caption goes here.]
+        * Project description 
 
-    :markdown-it(html)
-        And when you're done, go back to the regular markdown filter.
+        Climate change and water scarcity are affecting more and more people each year. It is an actual problem. Even in Belgium, we get summers with more extreme temperatures and weather conditions. During winter, seeing snow becomes less common. Climate change is very visible. Images of drought, water scarcity or other extreme weather conditions due to climate change are part of the news frequently. This is how this problem caught our attention and we decided to do something about it. What we did for this through our iGEM year, can be found on our [project description](https://2020.igem.org/Team:UGent_Belgium/Description) page.  
+
+        * Contribution 
+
+        Although we were not able to perform any lab work, we wrote down all the information we gathered from literature on our wiki page.  Moreover, we wrote down all the experiments and tests which can be performed in the lab to first of all make the construct and to check if making the construct did succeed and secondly specific tests to test the INP and BG efficiency. You can read this [here](https://2020.igem.org/Team:UGent_Belgium/Engineering#Experiments), and more on our contribution [here](https://2020.igem.org/Team:UGent_Belgium/Contribution).
+
+        # Silver
+
+        * Engineering success 
+
+        Due to the COVID-19 pandemic, we were not able to perform any experiments in the lab. Consequentially, we worked out everything theoretically. On our [project page](https://2020.igem.org/Team:UGent_Belgium/Engineering), the design of our experiments and the evaluation of the outcome can be found.  
+
+        * Collaboration 
+
+        First of all, our team collaborated with the iGEM Paris-Bettencourt team. Furthermore, we participated in the Benelux meetup. There, all teams gave a presentation about their topics and feedback was given to each other. Last but not least, we collaborated with the other iGEM UGent team ‘Bubbly’. This collaboration was much more intense: we helped each other in the search for sponsors, shared the director and cameraman and did our outreach together. You can read more about our collaborations [here](https://2020.igem.org/Team:UGent_Belgium/Collaborations).
+
+        * Human Practices 
+
+        Every scientific project can be abused. This is also the case for our project if it would be used for political issues instead of solving real problems as water scarcity. We discussed this with a philosopher, Massimiliano Simons, postdoc at the department of philosophy and moral sciences at UGent to think about these topics. In addition, we made surveys for our stakeholders: farmers, weather experts and philosophers. For more detailed information, check our [Human practices & Outreach page](https://2020.igem.org/Team:UGent_Belgium/Human_Practices).
+
+        * Proposed Implementation 
+
+        As mentioned before, we want our product only be used for good intentions and purposes. Based on how we want to see our product used, together with the results of our surveys where we investigate the public opinion, we put a business plan together. It summarizes all the important baselines of our project together with future oppurtunities. More information regarding our business plan, can be found on the [Contribution page](https://2020.igem.org/Team:UGent_Belgium/Contribution#Businessplan). Safety aspects that need to be considered, are described in the [Safety form](https://2020.igem.org/Team:UGent_Belgium/Human_Practices).
+
+        # Gold
+
+        * Integrated human practices 
+
+        Discussions about whether or not GMO’s and synthetic biology can be used in daily life applications, are highly topical. Moreover, the use of GMO’s is not allowed in every country as this is the example in Belgium. Because of future opportunities of the cloud seeding technique and the possible use on a larger scale, we have to make sure people are actually willing to use our product. This is why we decided to make a product that does not contain any bacterial DNA so we can anticipate on possible issues regarding GMO legislation or negative perceptions. By doing this, we want to make our product as accessible as possible to every country, independent from contemporary laws. Read more [here](https://2020.igem.org/Team:UGent_Belgium/Human_Practices).
+
+        * Science communication 
+
+        [Science communication](https://2020.igem.org/Team:UGent_Belgium/Outreach#Sciencecommunication) was an important part of our outreach. Our goal was to target people who are unfamiliar when it comes to topics as synthetic biology. Targeting high school students was not an option to us as they also can participate in the iGEM competition. Therefore, our audience were children between the ages of 6 until 12 years old. We prepared lessons for them which were instructed by teachers of different schools. We made an [animation video](https://2020.igem.org/Team:UGent_Belgium/Fun#Animation) to introduce kids in a fun way to our project. Not only children are unfamiliar with synthetic biology, there are a lot of adults as well. Therefore, we wanted to do something that could be valuable for them as well. For this, we created together with team Bubbly a YouTube tutorial where we made five sessions dealing with Biopython. For more information, go check out our [Human practices & outreach page](https://2020.igem.org/Team:UGent_Belgium/Outreach#Outreach).  

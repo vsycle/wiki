@@ -15,7 +15,7 @@ for root, _, files in os.walk('src/pages'):
 
         filepath = Path(root) / Path(filename)
 
-        print(filename)
+        # print(filename)
         
         with open(filepath, 'r') as file:
             contents = file.readlines()
