@@ -44,11 +44,23 @@ block article
         
         Next, a CPEC (Circular Polymerase Extension Cloning) is done using __1_BBa_K584000_Backbone__ and __2_Protein E + overhangs__, which results in a new plasmid: __3_pSB13C_[PBAD_ProtE]__. In order to achieve this, first __2_Protein E + overhangs__ are made using __2_Protein E__ as template on which 2 overlapping primers (__2_ProtE_overhang_Fw__ and __2_ProtE_overhang_Rv__) are attached. The sticky ends  on the protein E gene are homologous with the sticky end on the backbone making annealing possible. CPEC was chosen because it has multiple benefits  over BioBricking. CPEC is a method that works without restriction enzymes and instead is based on homologies. On top of that, CPEC does not cause so called scars of left-over sequences the way the BioBrick system does. This means, contrary to the BioBrick system, that the whole reaction can be done in one eppendorf tube.
         
-        Finally, the backbone with the protein E gene (__3_pSB13C_[PBAD_ProtE]__) can be used in the BioBrick system together with the cut-out of the INP gene (__4_BBa_K1896011__) in order to get the new BioBrick containing both inaZ (INP gene) and protE (Protein E gene) on the same backbone.
-        
+        Finally, the backbone with the protein E gene (___3_pSB13C_[PBAD_ProtE]__) can be used in the BioBrick system together with the cut-out of the INP gene (__4_BBa_K1896011__) in order to get the new BioBrick containing both inaZ (INP gene) and protE (Protein E gene) on the same backbone.
+
+
+    - var imgpath = "" + require("../assets/img/Engineering_vec1.png")["default"]
+    +image(3, imgpath, "3_pSB13C[PBAD_ProtE]")
+    
+    - var imgpath = "" + require("../assets/img/Engineering_vec2.png")["default"]
+    +image(4, imgpath, "4_BBa_K1896011")
+    
+    - var imgpath = "" + require("../assets/img/Engineering_vec3.png")["default"]
+    +image(5, imgpath, "1_BBa_K584000")
+
+    :markdown-it
+
         The genbank files of all the backbones, plasmids and primers can be downloaded here:
 
-    //- a(class="btn btn-primary" href=require("../assets/downloads/GenBankFiles_Constructs_Vsycle.zip")["default"] download) Click to download
+    a(class="btn btn-primary" href=require("../assets/downloads/Vsycle_genbankfiles.zip")["default"] download) Click to download
 
     :markdown-it(html)
         ## Transformation – Antibiotic selection – Colony PCR – Illumina sequencing
@@ -73,14 +85,14 @@ block article
         Before colony PCR can be performed, a number of colonies need to be picked up from the LB/Chloroamphenicol plates. It is important to regrow these colonies and to label the petri dishes properly. This way, after the *E. coli* cells with the desired insert are identified, one can work further with the right colony. This is shown schematically in the Figure below (Figure 3).
 
     - var imgpath = "" + require("../assets/img/Engineering_fig3.png")["default"]
-    +image(3, imgpath, "Picking up a colony and labelling plates before starting the colony PCR")
+    +image(6, imgpath, "Picking up a colony and labelling plates before starting the colony PCR")
     
     :markdown-it(html)
 
         To perform colony PCR, vector specific primers are used. These are primers that are complementary to the vector and flank its multiple cloning site (MCS). As mentioned before, colony PCR can be used to differentiate between a vector without insert or a vector with (un)desired insert. This is because the amplification product after applying the technique differs in length. The amplification product of a vector with (un)desired insert will always be longer than the amplification product of a non-recombinant vector. By separating the obtained fragments by gel electrophoresis, it can be determined whether or not a cell contains an insert [Kyndt, Van Damme, & De Mey, 2019](#citation9); [Maervoet et al., 2019](#citation12). For this purpose, the length of the genes and the amplified part of the MCS must be determined in advance and a comparison must be made with a molecular ladder. It is known that the INP gene is 3603 bp long and the protein E gene of Phage phiX174 is 279 bp long [Brempt & Van Hove, 2016](#citation2); [Wang, 2013](#citation17). If a band is found on the gel that deviates from the size of the desired insert, no insert or another insert is cloned into the plasmid. If a band matches the desired size, it can be considered that these *E. coli* cells contain the desired insert. Then this colony will be picked up again and grown up on a new LB agar/Chloroamphenicol plate to make sure the right colony can be used later on in the fermentation process [Maervoet et al., 2019](#citation12).
 
     - var imgpath = "" + require("../assets/img/Engineering_fig4.png")["default"]
-    +image(4, imgpath, "Picking up and regrowing the right colony after performing the colony PCR.")
+    +image(7, imgpath, "Picking up and regrowing the right colony after performing the colony PCR.")
 
     :markdown-it(html)
 
