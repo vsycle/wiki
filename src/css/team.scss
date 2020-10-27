@@ -120,10 +120,42 @@ main {
 }
 .pi-wim {
   background-image: url("../assets/img/Team_Wim.jpg");
+  background-position-y: 50% !important;
 }
 .instr-michiel {
   background-image: url("../assets/img/Team_Michiel.png");
+  background-position-y: 30% !important;
 }
 .instr-jose {
   background-image: url("../assets/img/Team_Jose.png");
+  background-position-y: 30% !important;
+}
+
+.modal-title {
+  width: 100%;
+
+  button.close {
+    float: right;
+  }
+}
+
+.modal-body {
+  ul { list-style: none; } /* Remove default bullets */
+
+  li::before {
+      content: "\2B22"; /* Unicode hexagon symbol */
+      color: #cadbf2;
+      font-weight: bold;
+      padding-right: 10px;
+  }
+}
+
+.modal-dialog {
+    margin: 20vh auto 0px auto;
+}
+
+@include respond-above(lg) {
+  .modal-dialog {
+      max-width: 800px;
+  }
 }
