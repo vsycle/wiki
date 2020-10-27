@@ -165,4 +165,9 @@ $('label[for="themeSwitchInput"]').click(function() {
   else {
       $('body').removeClass('dark');
   }
-}); 
+});
+
+// Internet Explorer check
+if (window.document.documentMode) {
+  alert("This site is not designed with Internet Explorer in mind. Please use a more modern browser.")
+}
