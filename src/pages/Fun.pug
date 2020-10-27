@@ -8,7 +8,7 @@ block headVars
 block article
     :markdown-it(html)
         # Animation
-        This video was made for outreach, with the goal of showing children the importance of rain. We hope you'll enjoy it as well!
+        This video was made for [outreach](https://2020.igem.org/Team:UGent_Belgium/Outreach), with the goal of showing children the importance of rain. We hope you'll enjoy it as well!
     
     video(controls style="width: 100%;")
         source(src=require('Assets/video/animation_video_vsycle_subs.mp4')['default'] type="video/mp4")
@@ -16,7 +16,12 @@ block article
     :markdown-it(html)
         # Game
         
-        To introduce our project in a fun way to older age groups, we made the game Cloud Run. While the gameplay is pretty straightforward, it isn't easy! 
+        To introduce our project in a fun way to older age groups, we made the game Cloud Run. While the gameplay is pretty straightforward, it isn't easy! Your goal is to reach the highest cloud as fast as possible using your four lives. The platforms are pieces of grass, but due to drought and water scarcity, some platforms are inactive and cannot be used. In order to be able to continue, they must be activated by rain. Here you are confronted with a choice: either you use our ecological Vsycle product or you choose the easily available silver iodide. However, when using chemicals, you will lose one of your lives. Along the way, the character needs to collect several power-ups that she can use to reach more remote platforms or regain a live. The power-ups symbolize bubbly pearls containing flavonoids, which are designed by team Bubbly.
+
+    - var imgpath = "" + require("../assets/img/Fun_game.png")["default"]
+    +image(1, imgpath, "A screenshot from our game!")
+
+    :markdown-it(html)
 
         You can play it [here](https://bspanoghe.itch.io/cloud-run)
 
@@ -27,34 +32,34 @@ block article
         We've organized lessons for both primary school children and toddlers for our project, and have gotten some beautiful pictures of education in action in return. Here's a showcase of some of our favorites!
 
     - var imgpath = "" + require("../assets/img/Kidplan_1.png")["default"]
-    +image(1, imgpath, "\"The sun is sad and cries. It's raining tears.\"")
+    +image(2, imgpath, "\"The sun is sad and cries. It's raining tears.\"")
 
     - var imgpath = "" + require("../assets/img/Kidplan_2.png")["default"]
-    +image(2, imgpath, "\"It's raining a little. On the sun. The sun gets soaked and also becomes rain, orange rain.\"")
+    +image(3, imgpath, "\"It's raining a little. On the sun. The sun gets soaked and also becomes rain, orange rain.\"")
     
     - var imgpath = "" + require("../assets/img/Kidplan_3.png")["default"]
-    +image(3, imgpath, "\"We snip the cloud. The cloud is broken and it rains.\"")
+    +image(4, imgpath, "\"We snip the cloud. The cloud is broken and it rains.\"")
 
     - var imgpath = "" + require("../assets/img/Fun_fig1.jpg")["default"]
-    +image(4, imgpath, "Playing with the boats they made in the rain!")
+    +image(5, imgpath, "Playing with the boats they made in the rain!")
 
     - var imgpath = "" + require("../assets/img/Fun_fig2.jpg")["default"]
-    +image(5, imgpath, "Our animation video on the silver screen.")
+    +image(6, imgpath, "Our animation video on the silver screen.")
 
     - var imgpath = "" + require("../assets/img/Fun_fig3.jpg")["default"]
-    +image(6, imgpath, "There's no grass on this farm! Luckily, these kids are on it.")
+    +image(7, imgpath, "There's no grass on this farm! Luckily, these kids are on it.")
 
     - var imgpath = "" + require("../assets/img/Fun_fig7.jpg")["default"]
-    +image(7, imgpath, "We were happy to see some children were very enthusiastic about clouds!")
+    +image(8, imgpath, "We were happy to see some children were very enthusiastic about clouds!")
 
     
     - var imgpath = "" + require("../assets/img/Fun_fig4.png")["default"]
-    +image(8, imgpath, "Some people see dogs in the clouds...")
+    +image(9, imgpath, "Some people see dogs in the clouds...")
         
     
     - var imgpath = "" + require("../assets/img/Fun_fig5.png")["default"]
-    +image(9, imgpath, "Some people see SUPERDOGS in the clouds!")
+    +image(10, imgpath, "Some people see SUPERDOGS in the clouds!")
 
     
     - var imgpath = "" + require("../assets/img/Fun_fig6.png")["default"]
-    +image(10, imgpath, "We believe the artist of this piece may have seen a glimpse of God.")
+    +image(11   , imgpath, "We believe the artist of this piece may have seen a glimpse of God.")

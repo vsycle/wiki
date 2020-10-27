@@ -71,7 +71,7 @@ header {
 ******************************/
 
 .sidebar {
-  margin-top: 1rem;
+  margin-top: 4rem;
   padding: 2rem 5rem 0 1rem;
 
   h5 {
@@ -177,6 +177,7 @@ header {
 
   article {
     padding: calc(1rem + 1.2vw);
+    margin-top: 3rem;
   }
 
   h1,
@@ -295,6 +296,7 @@ header {
 
   .image {
     text-align: center;
+    margin-bottom: 2rem;
 
     img {
       padding: 20px;
