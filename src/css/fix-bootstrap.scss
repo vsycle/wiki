@@ -47,6 +47,12 @@ h5 {
   margin: 0;
 }
 
+body.modal-open {
+  overflow: visible;
+}
+
+body { padding-right: 0 !important }
+
 .fixed-top-fix {
   position: fixed;
   right: 0;
